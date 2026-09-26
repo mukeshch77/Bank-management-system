@@ -1,0 +1,58 @@
+# ===== BACKEND (Java / Maven) =====
+
+# Maven build output
+backend/target/
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# VS Code Java
+.vscode/
+
+# Environment files (never commit secrets!)
+backend/src/main/resources/application-prod.properties
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+logs/
+
+# ===== FRONTEND (Node / React) =====
+
+# Node modules (npm packages - too large to commit)
+frontend/node_modules/
+
+# Build output
+frontend/dist/
+frontend/build/
+
+# Local environment files
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+
+# Cache files
+frontend/.vite/
+
+# ===== DATABASE =====
+# Don't commit any file with actual production credentials
+*.sql.bak
+
+
+# Frontend env file (production secrets)
+frontend/.env.production.local
+
+# Git credentials
+*.orig
