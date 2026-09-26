@@ -1,8 +1,3 @@
--- ============================================================
--- BANK MANAGEMENT SYSTEM - PostgreSQL Schema
--- ============================================================
-
--- TABLE 1: users
 CREATE TABLE IF NOT EXISTS users (
     id          BIGSERIAL PRIMARY KEY,
     first_name  VARCHAR(100) NOT NULL,
@@ -16,7 +11,6 @@ CREATE TABLE IF NOT EXISTS users (
     updated_at  TIMESTAMP
 );
 
--- TABLE 2: accounts
 CREATE TABLE IF NOT EXISTS accounts (
     id              BIGSERIAL PRIMARY KEY,
     account_number  VARCHAR(20) NOT NULL UNIQUE,
@@ -32,7 +26,6 @@ CREATE TABLE IF NOT EXISTS accounts (
         ON DELETE CASCADE
 );
 
--- TABLE 3: transactions
 CREATE TABLE IF NOT EXISTS transactions (
     id              BIGSERIAL PRIMARY KEY,
     type            VARCHAR(20) NOT NULL,
@@ -47,12 +40,6 @@ CREATE TABLE IF NOT EXISTS transactions (
         ON DELETE CASCADE
 );
 
--- ============================================================
--- SAMPLE DATA
--- admin password: admin123
--- john password: password123
--- PIN: 1234
--- ============================================================
 INSERT INTO users (first_name, last_name, email, password, phone, address, role, created_at, updated_at)
 VALUES (
     'Admin', 'User', 'admin@bank.com',
